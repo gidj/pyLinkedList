@@ -1,10 +1,10 @@
 import unittest
-from pylist import List, ListItem
+from pylist import LinkedList, LinkedListItem
 
 class SingleCases(unittest.TestCase):
     """ Test edge cases """
     def setUp(self):
-        self.l = List()
+        self.l = LinkedList()
         self.l.append('test_item')
 
     def test_one_item_head(self):
@@ -21,7 +21,7 @@ class SingleCases(unittest.TestCase):
 class DoubleCases(unittest.TestCase):
     """ Test edge cases """
     def setUp(self):
-        self.l = List()
+        self.l = LinkedList()
         self.l.append('test_item')
         self.l.append('second')
 
@@ -33,7 +33,7 @@ class NumbersTestCase(unittest.TestCase):
     """ Test different numbers cases """
     def setUp(self):
         self.integers = [5, 6, -8, 0, 3, 2, -1]
-        self.l = List()
+        self.l = LinkedList()
         for num in self.integers:
             self.l.append(num)
 

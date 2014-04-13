@@ -1,11 +1,11 @@
-class List:
+class LinkedList:
     def __init__(self):
         self.length = 0
         self.head = None
         self.tail = None
 
     def append(self, value):
-        new_item = ListItem(value, previous=self.tail)
+        new_item = LinkedListItem(value, previous=self.tail)
         if self.length is 0:
             self.head = new_item
         else:
@@ -14,7 +14,7 @@ class List:
         self.length += 1
 
     def prepend(self, value):
-        new_item = ListItem(value, next=self.head)
+        new_item = LinkedListItem(value, next=self.head)
         if self.length is 0:
             self.tail = new_item
 
@@ -78,7 +78,7 @@ class List:
 
         return cursor.payload
 
-class ListItem:
+class LinkedListItem:
     def __init__(self, value, previous=None, next=None):
         self.payload = value
         self.previous = previous
